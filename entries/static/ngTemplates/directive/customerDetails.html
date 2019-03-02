@@ -1,0 +1,22 @@
+<div class="customerDetails" style="">
+  <p class="title_name">{{data.name}}</p>
+
+  <input class="my_datepicker" type="text" style="float:left" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="form.date" is-open="calender.opened" />
+  <span class="my_datepicker_Btn" ng-click="calender.opened=true"><i class="far fa-calendar-plus"></i></span>
+  <span class="totalAmount">Total : {{totalAmount}}</span>
+  <table style="width:100%;font-size:1rem">
+  <tr style="border-bottom:.1rem var(--special) dotted">
+    <th>Date</th>
+    <th>Amount</th>
+    <th>Price</th>
+  </tr>
+  <tr ng-repeat="entry in entries" ng-if="entries">
+    <td>{{entry.created | date:dd/MM/yyyy}}</td>
+    <td>{{entry.amount}}</td>
+    <td ng-if="!data.is_receiver">{{entry.milk | getMilkReceivePrice}}</td>
+    <td ng-if="data.is_receiver">{{entry.milk | getMilkPrice}}</td>
+  </tr>
+</table>
+
+
+</div>

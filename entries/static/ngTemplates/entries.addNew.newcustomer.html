@@ -1,0 +1,44 @@
+
+<uib-tabset >
+
+  <uib-tab index=0 heading="New" ng-click="setTab(1)" class="{{1 == activeTab ? 'activeTab':'' }}">
+      <div class="new_temp">
+        <div class="customerEntry" style="padding:1.2rem;">
+          <label class="container"><span style="font-size:1rem">Receiver</span>
+            <input type="checkbox" name="radio" ng-model="newForm.is_receiver" ng-value="true">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <input class="input_box" type="text" name="" value="" ng-model="newForm.name" placeholder="Name">
+        <input class="input_box" type="text" name="" value="" ng-model="newForm.phoneNumber" placeholder="Phone Number">
+        <input class="input_box" type="text" name="" value="" ng-model="newForm.street" placeholder="Street">
+        <input class="input_box" type="text" name="" value="" ng-model="newForm.city" placeholder="City">
+        <input class="input_box" type="text" name="" value="" ng-model="newForm.state" placeholder="State">
+        <!-- <input type="text" name="" value="" ng-model="newForm.is_receiver"> -->
+        <input class="input_box" type="text" class="form-control" ng-model="newForm.client" uib-typeahead="u as u.username for u in userSearch($viewValue,newForm)" placeholder="search and select customer">
+        <button class="submit_btn" type="button" name="button" ng-click="addNewCustomer()">Add</button>
+      </div>
+
+    </uib-tab>
+  <uib-tab index=1 heading="Edit" ng-click="setTab(2)" class="{{2 == activeTab ? 'activeTab':'' }}">
+
+      <div class="edit_temp">
+
+        <input class="input_box" type="text" name="" value="" ng-model="editForm.name" uib-typeahead="u as u.name for u in customerSearch($viewValue)" placeholder="Search and Select" typeahead-on-select="onSelect($item)">
+        <input class="input_box" type="text" name="" value="" ng-model="editForm.phoneNumber" placeholder="Phone Number">
+        <input class="input_box" type="text" name="" value="" ng-model="editForm.street" placeholder="Street">
+        <input class="input_box" type="text" name="" value="" ng-model="editForm.city" placeholder="City">
+        <input class="input_box" type="text" name="" value="" ng-model="editForm.state" placeholder="State">
+        <div class="customerEntry" style="padding:1.1rem;">
+          <label class="container"><span style="font-size:1rem">Receiver</span>
+            <input type="checkbox" name="radio" ng-model="editForm.is_receiver" ng-value="true">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <!-- <input type="text" name="" value="" ng-model="newForm.is_receiver"> -->
+        <input class="input_box" type="text" class="form-control" ng-model="editForm.client" uib-typeahead="u as u.username for u in userSearch($viewValue,editForm)" placeholder="search and select customer">
+        <button class="submit_btn" type="button" name="button" ng-click="editCustomer()">Submit Changes</button>
+
+      </div>
+    </uib-tab>
+</uib-tabset>

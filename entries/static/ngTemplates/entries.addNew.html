@@ -1,0 +1,11 @@
+
+<div class="addNew">
+
+  <div class="top_bar">
+    <ul>
+      <li ng-click="setSelected(1)" style="{{1==selectedClick ? 'border-bottom:2px solid var(--special)' : '' }}"><a ui-sref=".newMilkReceive">New Receive Type</a></li>
+      <li ng-click="setSelected(2)" style="{{2==selectedClick ? 'border-bottom:2px solid var(--special)' : '' }}"><a ui-sref=".newMilk">New Milk Type</a></li>
+      <li ng-click="setSelected(3)" style="{{3==selectedClick ? 'border-bottom:2px solid var(--special)' : '' }}"><a ui-sref=".newCustomer">New Customer</a></li>
+    </ul>
+  </div>
+  <div class="" ui-view></div>

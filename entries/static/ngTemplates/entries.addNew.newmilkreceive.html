@@ -1,0 +1,22 @@
+
+<uib-tabset >
+
+  <uib-tab index=0 heading="New" ng-click="setTab(1)" class="{{1 == activeTab ? 'activeTab':'' }}">
+      <div class="new_temp">
+        <input class="input_box" type="text" name="" value="" ng-model="newForm.name" placeholder="Name">
+        <input class="input_box" type="text" name="" value="" ng-model="newForm.price" placeholder="Rate">
+        <button class="submit_btn" type="button" name="button" ng-click="addNewMilkReceive()">Add</button>
+      </div>
+
+    </uib-tab>
+  <uib-tab index=1 heading="Edit" ng-click="setTab(2)" class="{{2 == activeTab ? 'activeTab':'' }}">
+      <div class="edit_temp">
+
+        <input class="input_box" type="text" name="" value="" ng-model="editForm.name" uib-typeahead="u as u.name for u in milkReceiveSearch($viewValue)" placeholder="Search and Select" typeahead-on-select="onSelect($item)">
+        <input class="input_box" type="text" name="" value="" ng-model="editForm.price" placeholder="Rate">
+
+        <button class="submit_btn" type="button" name="button" ng-click="editMilkReceive()">Submit Changes</button>
+
+      </div>
+    </uib-tab>
+</uib-tabset>

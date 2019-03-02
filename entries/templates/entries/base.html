@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>milk_man</title>
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/topBar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/entries.customers.css' %}">
+
+
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.22/angular-ui-router.js" charset="utf-8"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <div ng-app="app">
+      {% if messages %}
+         <ul>
+             {% for message in messages %}
+             <li>{{ message }}</li>
+             {% endfor %}
+         </ul>
+     {% endif %}
+
+
+     <div ng-controller="main">
+       {% block content %}
+       {% endblock content %}
+     </div>
+    </div>
+    <script src="{% static 'js/baseScript.js' %}" charset="utf-8"></script>
+    <script src="{% static 'js/directive.js' %}" charset="utf-8"></script>
+    <script src="{% static 'js/filter.js' %}" charset="utf-8"></script>
+  </body>
+</html>

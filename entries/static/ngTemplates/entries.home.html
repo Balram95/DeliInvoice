@@ -1,0 +1,6 @@
+<div class="customers">
+  <div class="sideMenu" ng-include="sideMenu"></div>
+  <div class="mainMenu" ng-if="currentQuery">
+    <customer-Entry ng-if="isTrue" data="currentQuery" milks="onlyCustomers? milks:milkReceive"></customer-Entry>
+  </div>
+</div>

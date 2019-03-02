@@ -1,0 +1,16 @@
+<div class="customerEntry">
+  <p class="title_name">{{data.name}}</p>
+    <!-- <input uib-typeahead="customer as customer.name for customer in customers" ng-model="form.name" type="text" class="form-control" placeholder="Search using name"> -->
+    <input class="my_datepicker" type="text" style="float:left" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="form.date" is-open="calender.opened" />
+    <span class="my_datepicker_Btn" ng-click="calender.opened=true"><i class="far fa-calendar-plus"></i></span>
+    <div class="entry_container">
+      <input type="text" class="input_box" name="" ng-model="form.amount" placeholder="Qunatity">
+      <div style="margin-top:1.5rem;">
+        <label ng-repeat="milk in milks" class="container"><span style="font-size:1.1rem">{{milk.name}}</span>
+          <input type="radio" name="radio" ng-model="form.milk.id" ng-value="milk.id">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <button class="submit_btn" type="button" name="Add" ng-click="sendQuery()">Add</button>
+    </div>
+</div>

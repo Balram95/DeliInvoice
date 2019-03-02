@@ -1,0 +1,19 @@
+<!-- <div class="sideMenu"> -->
+
+  <button class="sideMenuButton" type="button" name="button" ng-click="setType()">{{type}}</button>
+  <input type="text" style="box-shadow: 0 0 .3rem var(--background)" class="input_box" ng-model="searchCustomer" placeholder="Enter name">
+  <ul class="">
+    <li ng-repeat="customer in customers | filter:{name:searchCustomer}"
+    class="{{customer.id == active ? 'activeList':'' }}"
+     ng-click="setCurrentQuery(customer)"
+     ng-if="customer.is_receiver&&onlyCustomers">
+      {{customer.name}}
+    </li>
+    <li ng-repeat="customer in customers | filter:{name:searchCustomer}"
+    class="{{customer.id == active ? 'activeList':'' }}"
+     ng-click="setCurrentQuery(customer)"
+     ng-if="!customer.is_receiver&&onlyCustomers==false">
+      {{customer.name}}
+    </li>
+  </ul>
+<!-- </div> -->

@@ -1,0 +1,17 @@
+{% extends "entries/base.html" %}
+
+{% block content %}
+    <div class="container">
+      <h2>all posts</h2>
+      <ul>
+        {% for post in posts %}
+          <li style="box-shadow:1px 1px 5px grey;margin:5px;padding:10px">
+            <p>{{post.title}}</p>
+            <p>{{post.content}}</p>
+            <a href="{% url 'blogs-detail' post.pk %}">open</a>
+          </li>
+        {% endfor %}
+
+      </ul>
+    </div>
+{% endblock content %}

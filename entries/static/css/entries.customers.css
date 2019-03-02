@@ -1,0 +1,177 @@
+.customers{
+  display: flex;
+  height: 100vh;
+}
+.customers .sideMenu{
+  background-color: var(--sideMenu);
+  padding: 1rem;
+  width:20rem;
+  list-style: none;
+  /* text-align: center; */
+  /* align-items: center; */
+
+}
+
+.input_box {
+  width:100%;
+  border: none;
+  font-size: 1rem;
+  padding: .2rem .7rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 .1rem var(--special)
+}
+
+.sideMenu .sideMenuButton{
+  border: none;
+  font-size: .8rem;
+  font-weight: 700;
+  margin:1rem 0rem;
+  letter-spacing: .1rem;
+  display: block;
+  background: var(--special);
+  color:var(--background);
+  opacity: 0.8;
+  width: 100%;
+  padding: .2rem 1.4rem;
+  border-radius: .7rem;
+  box-shadow: 0 0 .7rem var(--fontColor);
+  outline:none;
+}
+
+
+.activeList{
+  color:var(--fontColor) !important;
+}
+
+.sideMenu>button:hover{
+  box-shadow: .2rem .2rem 1rem var(--fontColor)
+}
+.sideMenu>ul{
+  list-style: none;
+}
+
+.sideMenu>ul li{
+  color:var(--background);
+  cursor:pointer;
+  font-size:.9rem;
+  border-bottom: .12rem var(--fontColor) solid;
+  padding: .3rem .8rem;
+  margin:.3rem 0px
+}
+
+.customers .mainMenu{
+  width:100%;
+  padding: .15rem;
+}
+.title_name{
+  font-size: 1.1rem;
+  border-bottom: .2rem var(--special) solid;
+  padding: .3rem 2rem;
+  width:100%;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.entry_container{
+  margin: 2rem 0;
+  font-size: 1rem;
+  padding: 1.5rem;
+  width:100%;
+  box-shadow: .2rem .3rem .4rem var(--special);
+}
+.my_datepicker{
+  padding: .2rem;
+  font-size: 1rem;
+  border: 2px var(--special) solid;
+}
+.my_datepicker_Btn{
+  padding: .1rem 1rem .2rem 1rem;
+  border-radius: .5rem;
+  font-size:1.2rem;
+  cursor: pointer;
+  /* background-color: var(--special) */
+}
+.customerDetails{
+  padding: 1.5rem;
+  animation: fadeIn .5s ;
+}
+.customers{
+  /* padding: 1.5rem; */
+  animation: fadeIn .5s ;
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+    /* transform:scale(.9); */
+  }
+  40%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1
+    /* transform:scale(1); */
+  }
+}
+
+.customerDetails table{
+  margin-top: 2rem;
+}
+
+.customerDetails table td{
+  padding:.5rem 0rem;
+}
+.customerDetails .totalAmount{
+  padding:.5rem 1rem;
+  float: right;
+  font-size: .9rem;
+  margin-right:1rem;
+  background-color: var(--special)
+}
+
+
+.submit_btn{
+  text-align: center;
+  padding: .2rem .5rem;
+  margin-top: 1.5rem;
+  width: 100%;
+  background: var(--special)
+}
+
+
+.activeTab {
+  border: .1rem solid var(--special);
+  background: #f6f6f6;
+  border-bottom: 0px
+}
+
+
+.addNew{
+  font-size: 1rem;
+}
+
+.addNew .top_bar>ul{
+  display:flex;
+  justify-content: space-around;
+  margin:1rem 0rem;
+
+}
+.addNew .top_bar>ul>li{
+  color:var(--special);
+  list-style: none;
+  padding: .5rem;
+  justify-content: space-around;
+}
+.addNew .top_bar>ul>li>a{
+  color:var(--special);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.new_temp{
+  padding: 2rem;
+  font-size: 1rem;
+}
+.edit_temp{
+  padding: 2rem;
+  font-size: 1rem;
+}

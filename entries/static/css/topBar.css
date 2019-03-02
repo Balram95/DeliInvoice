@@ -1,0 +1,25 @@
+.home{
+
+}
+.topBar ul{
+  background:var(--sideMenu);
+  display:flex;
+  width:100%;
+  flex-direction:row;
+  list-style:none;
+  justify-content:space-around;
+  /* border-bottom: .2rem solid var(--background) */
+}
+
+.topBar ul li{
+  cursor: pointer;
+  font-size: 1rem;
+  /* border-bottom: .1rem var(--special) solid; */
+  padding: .2rem .8rem;
+  margin: .5rem;;
+  /* border-radius:.5rem; */
+}
+.topBar ul li a{
+  color:var(--special);
+  font-weight:700;
+}

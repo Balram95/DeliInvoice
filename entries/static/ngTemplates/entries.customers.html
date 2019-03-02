@@ -1,0 +1,7 @@
+<div class="customers">
+
+  <div class="sideMenu" ng-include="sideMenu"></div>
+  <div class="mainMenu" ng-if="currentQuery">
+    <customer-details ng-if="isTrue" data="currentQuery"></customer-details>
+  </div>
+</div>
